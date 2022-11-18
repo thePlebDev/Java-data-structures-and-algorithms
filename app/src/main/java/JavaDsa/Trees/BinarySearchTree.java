@@ -88,26 +88,23 @@ public class BinarySearchTree {
         }
     }
 
-    public Boolean breadthFirstSearch(int target){
-
+    public Boolean breadthFirstTraversal(){
+        List<Node> breadthList = new ArrayList<>();
         if(this.root != null){
             Queue<Node> queue = new LinkedList<>();
             queue.add(this.root);
             while(!queue.isEmpty()){
                 Node node = queue.remove();
-
-                if(node.getElement() == target){
-                    return true;
-                }
-                
+                breadthList.add(node);
                 for(Node n:children(node)){
-
                     queue.add(n);
                 }
             }
         }
 
-
+        for(Node n: breadthList){
+            System.out.println(n.getElement());
+        }
         return false;
     }
 

@@ -23,7 +23,7 @@ public class App {
         tree.insert(7);
         tree.insert(13);
 
-        System.out.println(tree.breadthFirstSearch(8));
+        tree.breadthFirstTraversal();
 
 
 
